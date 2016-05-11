@@ -2,7 +2,7 @@ package urijudge.iniciante;
 
 import java.util.Scanner;
 
-public class AreaDoCirco {
+public class AreaDoCirculo {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
