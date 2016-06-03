@@ -1,2 +1,2 @@
 # URIJudge
-Exercícios do site URI Judge 
+Os Exercicios deste repositório são do site https://www.urionlinejudge.com.br
