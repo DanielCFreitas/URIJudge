@@ -10,15 +10,28 @@ public class CrescimentoPopulacional {
 		double g1, g2;
 		Scanner read = new Scanner(System.in);
 
-		casosDeTeste = read.nextInt();
+		do {
+			casosDeTeste = read.nextInt();
+		} while (casosDeTeste < 1 || casosDeTeste > 3000);
 
 		while (casosDeTeste > 0) {
 			int ano = 0;
 
-			populacaoA = read.nextLong();
-			populacaoB = read.nextLong();
-			g1 = read.nextDouble();
-			g2 = read.nextDouble();
+			do {
+				populacaoA = Long.parseLong(read.nextLine());
+			} while (populacaoA < 100 || populacaoA > 1000000);
+
+			do {
+				populacaoB = Long.parseLong(read.nextLine());
+			} while (populacaoB < populacaoA || populacaoB > 1000000);
+
+			do {
+				g1 = Double.parseDouble(read.nextLine());
+			} while (g1 < 0.1 || g1 > 10.0);
+
+			do {
+				g2 = Double.parseDouble(read.nextLine());
+			} while (g2 < 0.0 || g2 > 10.0 || g2 > g1);
 
 			while (populacaoA <= populacaoB) {
 				populacaoA = (int) (populacaoA + (populacaoA * (g1 / 100)));
